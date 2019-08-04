@@ -1,0 +1,13 @@
+/**app.wxss**/
+
+/*****统一样式******
+.grey{  color: #d0d0d0;}
+.yellow{  color: #f4ea2a;}
+.box{  border-radius: 4rpx;  box-shadow:1px 0px 8px #ededed;}
+***********/
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}

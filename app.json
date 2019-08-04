@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/lesson/lesson",
+    "pages/mine/mine",
+    "pages/view/view",
+    "pages/rank/rank",
+    "pages/lesson/lessonlist",
+    "pages/lesson/lessonshow"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffeb3b",
+    "navigationBarTitleText": "怪兽研习社",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#aeaeae",
+    "selectedColor": "#ffeb3b",
+    "borderStyle": "white",
+    "backgroundColor": "white",
+    "list": [
+      {
+        "selectedIconPath": "pages/public/images/crown-fill.png",
+        "iconPath": "pages/public/images/crown.png",
+        "pagePath": "pages/index/index",
+        "text": "打卡"
+      },
+      {
+        "selectedIconPath": "pages/public/images/rocket-fill.png",
+        "iconPath": "pages/public/images/rocket.png",
+        "pagePath": "pages/lesson/lesson",
+        "text": "学习"
+      },
+      {
+        "selectedIconPath": "pages/public/images/trophy-fill.png",
+        "iconPath": "pages/public/images/trophy.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

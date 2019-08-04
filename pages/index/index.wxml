@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="contain">
+  <view class="banner">
+      <image src="../public/images/a1.jpg"></image>
+  </view>
+  <view class="iterm">
+      <view class="l-tittle">【Python】我写的第一个程序</view>
+      <view class="d-title">阅读本文需要4分钟</view>
+      <view class="btn">参与打卡</view>
+      <view class="line">
+          <view class="l-img">
+              <image src="../public/images/logo.jpg"></image>
+              <image src="../public/images/logo.jpg"></image>
+              <image src="../public/images/logo.jpg"></image>
+              <image src="../public/images/logo.jpg"></image>
+              <image src="../public/images/logo.jpg"></image>
+          </view>
+          <view class="r-info">有303人和你一起学习</view>
+      </view>
+     
+  </view>
+  <view class="grid-2">
+      <view class="grid-iterm1 left" style=" background-image: url('../public/images/bg1.jpg')">
+          <view class="g-title">专属社群</view>
+          <view class="g-desc">让我与你一起成长</view>
+      </view>
+      <view class="grid-iterm2 right" style=" background-image: url('../public/images/bg1.jpg')">
+          <view class="g-title">排行榜</view>
+          <view class="g-desc">看看谁是最厉害的</view>
+      </view>
+  </view>
+</view>

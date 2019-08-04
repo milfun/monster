@@ -1,0 +1,67 @@
+/* pages/lesson/lesson.wxss */
+/**lesson.wxss**/
+
+.contain{
+  padding: 0 30rpx;
+}
+.nav{
+  display: block;
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 32rpx;
+    text-align: left;
+    justify-content: space-between;
+}
+.title{
+  display: inline-block;
+    width: 30%;
+    float: left; 
+    color:#d0d0d0;
+    font-weight: 200;
+}
+.card{
+    height: 300rpx;
+    padding: 20rpx;
+    margin: 20rpx 0;
+    color: #FFF;
+    background-color: #ffeb3b;
+    border-radius: 10rpx;
+}
+.line-one{
+  display: block;
+  padding: 10rpx 0;
+  height: 60rpx;
+}
+.l-title{
+  display: inline-block;
+  float: left;
+  font-size: 30rpx;
+  padding: 10rpx;
+
+}
+.season{
+  display: inline-block;
+  float: right;
+  font-size: 24rpx;
+  padding: 10rpx 20rpx;
+  color: #ffeb3b;
+  background-color: #FFF;
+  border-radius: 4rpx;
+}
+.line-two{
+  display: block;
+  padding: 10rpx 0;
+  height: 50rpx;
+  color: #FFF;
+  font-size: 24rpx;
+}
+.total{
+  display: inline-block;
+  padding:0 10rpx;
+}
+.desc{display: inline-block;padding:0 10rpx;}
+.date{
+  padding: 10rpx;
+  font-size: 24rpx;
+}
