@@ -1,0 +1,4 @@
+<!--pages/canvas/canvas.wxml-->
+<view class="haha">
+<canvas canvasId="cc" style="width:100%;height:600px;"></canvas>
+</view>

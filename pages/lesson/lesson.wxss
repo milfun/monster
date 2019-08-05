@@ -27,6 +27,7 @@
     color: #FFF;
     background-color: #ffeb3b;
     border-radius: 10rpx;
+    background-size:100%;
 }
 .line-one{
   display: block;

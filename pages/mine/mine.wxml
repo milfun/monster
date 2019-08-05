@@ -1,20 +1,20 @@
 <!--pages/mine/mine.wxml-->
 <view class="contain">
   <view class="head">
-      <image src="../public/images/a1.jpg"></image>
+      <image src="../public/images/logo.jpg"></image>
       <view class="name">MilFun</view>
       <view class="iterm">
           <view class="grid-3">
-              <view class="grid-iterm">
+              <view class="grid-iterm"  style=" background-image: url('../public/images/it1.jpg')">
                   <view class="num">15天</view>
                   <view class="desc">累计学习</view>
               </view>
-              <view class="grid-iterm">
-                  <view class="num">3</view>
+              <view class="grid-iterm"  style=" background-image: url('../public/images/it2.jpg')">
+                  <view class="num">3天</view>
                   <view class="desc">连续打卡</view>
               </view>
-              <view class="grid-iterm">
-                  <view class="num">1</view>
+              <view class="grid-iterm"  style=" background-image: url('../public/images/it3.jpg')">
+                  <view class="num">10</view>
                     <view class="desc">积分数量</view>
               </view>
           </view>
@@ -24,17 +24,17 @@
 
   <view class="btn-list">
       <view class="grid-2">
-          <view class="grid-iterm2 left" style=" background-image: url('../public/images/bg1.jpg')">
+          <view class="grid-iterm2 left" style=" background-image: url('../public/images/bg3.jpg')">
               <view class="g-title">专属社群</view>
               <view class="g-desc">让我与你一起成长</view>
           </view>
-          <view class="grid-iterm2 right" style=" background-image: url('../public/images/bg1.jpg')">
+          <view class="grid-iterm2 right" style=" background-image: url('../public/images/bg4.jpg')">
               <view class="g-title">排行榜</view>
               <view class="g-desc">看看谁是最厉害的</view>
           </view>
       </view>
       <view class="grid">
-          <view class="grid-iterm1 right" style=" background-image: url('../public/images/bg1.jpg')">
+          <view class="grid-iterm1 right" style=" background-image: url('../public/images/bg5.jpg')">
               <view class="g-title">生成专属海报</view>
               <view class="g-desc">看看谁是最厉害的</view>
           </view>
