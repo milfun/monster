@@ -7,7 +7,8 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    list:{}
   },
   //事件处理函数
   bindViewTap: function() {
@@ -15,7 +16,22 @@ Page({
       url: '../logs/logs'
     })
   },
+  //web-view打开
+  goweb:function(t){
+    var e = this,
+    a = t.currentTarget.dataset.aid;
+    if(a){
+    
+    }else{
+      u = t.currentTarget.dataset.url;
+    }
+    
+    wx.navigateTo({
+      url: '../view/view?aid='+encodeURI(a)
+    })
+  },
   onLoad: function () {
+    var that=this
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -42,6 +58,14 @@ Page({
         }
       })
     }
+    //首页打卡文章1
+    app.func.req('c=index&a=getarticle', {}, function (res) {
+      if (res.status) {
+        that.setData({
+          list: res.list
+        })
+      }
+    })
   },
   getUserInfo: function(e) {
     console.log(e)
@@ -51,4 +75,5 @@ Page({
       hasUserInfo: true
     })
   }
+  
 })

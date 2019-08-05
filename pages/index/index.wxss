@@ -23,22 +23,22 @@
   box-shadow:1px 0px 8px #ededed;
 }
 .l-tittle{
-  color: #00b6d7;
+  color: #282828;
   font-size: 30rpx;
 }
 .d-title{
   padding: 20rpx 0;
-  color: #d0d0d0;
+  color: #bbbbbb;
   font-size: 24rpx;
 }
 .btn{
   display: inline-block;
   padding: 20rpx 50rpx;
   margin: 30rpx 0;
-  color: #FFF;
-  background-color: #ffeb3b;
+  color: #282828;
+  background-color: #ffe300;
   font-size: 34rpx;
-  border-radius: 50rpx;
+  border-radius: 10rpx;
 }
 .line{
   display: block;
@@ -51,6 +51,7 @@
   float: left;
   padding: 0 20rpx;
   margin: 20rpx 0 0 0;
+  
 }
 .l-img image{
   display: inline-block;
@@ -59,6 +60,7 @@
   height: 50rpx;
   margin-left: -20rpx;
   border-radius: 100rpx;
+  
 }
 .r-info{
   display: inline-block;
@@ -66,7 +68,7 @@
   line-height: 50rpx;
   height: 50rpx;
   padding: 20rpx 0;
-  color: #d0d0d0;
+  color: #bbbbbb;
   font-size: 24rpx;
 }
 
@@ -81,7 +83,7 @@
   display: inline-block;
   width: 48%;
   height: 180rpx;
-  /*background-image: url('../public/images/bg1.jpg')*/
+  background-image: url('https://milfun.fun/mp/weixinapp/images/bg1.jpg');
   background-size:100%;
   border-radius: 4rpx;
   box-shadow:1px 0px 8px #ededed;
@@ -90,7 +92,7 @@
   display: inline-block;
   width: 48%;
   height: 180rpx;
-    /*background-image: url('../public/images/bg1.jpg')*/
+  background-image: url('https://milfun.fun/mp/weixinapp/images/bg2.jpg');
   background-size:100%;
   border-radius: 4rpx;
   box-shadow:1px 0px 8px #ededed;
@@ -98,10 +100,10 @@
 .g-title{
   padding: 40rpx 30rpx 0rpx 30rpx;
   font-size: 30rpx;
-  color: #2f2f2f;
+  color: #282828;
 }
 .g-desc{
-  padding: 10rpx 30rpx;
+  padding: 20rpx 30rpx;
   font-size: 20rpx;
   color: #d0d0d0;
 }

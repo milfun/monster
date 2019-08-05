@@ -19,7 +19,7 @@
   display: inline-block;
     width: 30%;
     float: left; 
-    color:#d0d0d0;
+    color:#282828;
     font-weight: 200;
 }
 .list{
@@ -29,7 +29,7 @@
   height: 180rpx;
     padding: 20rpx;
     margin: 20rpx 0;
-   /* background-color: #f4ea2a;*/
+    background-color: #ffe300;
     border-radius: 10rpx;
     box-shadow:1px 1px 8px #ededed;
 }
@@ -40,13 +40,13 @@
 .d-title{
   padding: 20rpx 0;
   font-size: 24rpx;
-  color: #d0d0d0;
+  color: #282828;
 
 }
 .r-info{
   font-size: 24rpx;
   padding: 10rpx 0;
-  color: #d0d0d0;
+  color: #282828;
 }
 
 

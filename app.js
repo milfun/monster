@@ -1,4 +1,5 @@
 //app.js
+var commonFun = require('common-fun.js')
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -32,6 +33,9 @@ App({
         }
       }
     })
+  },
+  func:{
+    req: commonFun.req,//http 请求
   },
   globalData: {
     userInfo: null

@@ -12,13 +12,13 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#ffeb3b",
+    "navigationBarBackgroundColor": "#ffe300",
     "navigationBarTitleText": "怪兽研习社",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "#aeaeae",
-    "selectedColor": "#ffeb3b",
+    "color": "#282828",
+    "selectedColor": "#ffe300",
     "borderStyle": "white",
     "backgroundColor": "white",
     "list": [

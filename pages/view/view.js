@@ -1,18 +1,31 @@
 // pages/view/view.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    web_src: '', //webview内嵌的url
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    var aid = options.aid
+    //根据aid获取跳转链接
+    app.func.req('c=index&a=getarticle', {}, function (res) {
+      if (res.status) {
+       /* wx.showToast({
+          title: res.list.link,
+        })*/
+        that.setData({
+          web_src: res.list.link
+        })
+      }
+    })
   },
 
   /**

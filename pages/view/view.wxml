@@ -1,2 +1,2 @@
 <!--pages/view/view.wxml-->
-<text>pages/view/view.wxml</text>
+<web-view src="{{web_src}}" ></web-view>

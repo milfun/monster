@@ -10,7 +10,7 @@
     height: 300rpx;
     padding: 40rpx 0;
     margin:30rpx;
-    /*background: #ffeb3b;*/
+    /*background: #ffe300;*/
 }
 .head image{
   width: 150rpx;
@@ -21,7 +21,7 @@
 .name{
   padding: 10rpx 0;
   font-size: 40rpx;
-  color: #2f2f2f;
+  color: #282828;
 }
 .iterm{
   margin: 30rpx 0;
@@ -51,7 +51,7 @@
   width: 30%;
   height: 150rpx;
   background-color: #FFF;
-  /*background-image: url('../public/images/bg1.jpg')*/
+  background-image: url('https://milfun.fun/mp/weixinapp/images/it1.jpg');
   background-size:100%;
   border-radius: 10rpx;
   box-shadow:1px 0px 8px #ededed;
@@ -81,14 +81,19 @@
   border-radius: 4rpx;
   box-shadow:1px 0px 8px #ededed;
 }
+.g1{background-image: url('https://milfun.fun/mp/weixinapp/images/bg3.jpg');}
+.g2{background-image: url('https://milfun.fun/mp/weixinapp/images/bg4.jpg');}
+.g3{background-image: url('https://milfun.fun/mp/weixinapp/images/bg5.jpg');}
 .num{
   padding: 20rpx 0;
   font-size: 38rpx;
-  color: #ffeb3b;
+  color: #ffe300;
+  font-weight: bold;
 }
 .desc{
   font-size:24rpx;
-  color: #FFF;
+  padding: 10rpx 0;
+  color: #282828;
 }
 .g-title{
   padding: 40rpx 30rpx 0rpx 30rpx;
@@ -98,7 +103,7 @@
   font-weight: 200;
 }
 .g-desc{
-  padding: 10rpx 30rpx;
+  padding: 20rpx 30rpx;
   font-size: 20rpx;
   color: #d0d0d0;
 }
