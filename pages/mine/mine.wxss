@@ -3,13 +3,13 @@
   text-align: center;
 }
 .clear{
-  clear: both;
+  clear:both;height:0px;font-size:0px;line-height:0px;
 
 }
 .head{
-    height: 300rpx;
-    padding: 40rpx 0;
-    margin:30rpx;
+    display: block;
+    margin: 0 30rpx;
+    margin-top: 50rpx;
     /*background: #ffe300;*/
 }
 .head image{
@@ -87,8 +87,8 @@
 .num{
   padding: 20rpx 0;
   font-size: 38rpx;
-  color: #ffe300;
-  font-weight: bold;
+  color: #282828;
+  
 }
 .desc{
   font-size:24rpx;
@@ -108,7 +108,7 @@
   color: #d0d0d0;
 }
 .btn-list{
+  display: block;
   padding: 0 30rpx;
-  margin-top: 20rpx;
   text-align: left;
 }

@@ -8,7 +8,8 @@
     "pages/rank/rank",
     "pages/lesson/lessonlist",
     "pages/lesson/lessonshow",
-    "pages/canvas/canvas"
+    "pages/canvas/canvas",
+    "pages/loading/loading"
   ],
   "window": {
     "backgroundTextStyle": "light",

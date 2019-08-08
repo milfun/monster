@@ -5,29 +5,16 @@
 
     <!-- Tab 容器  end-->
    <view  class="nav">
-      <view  class="title">全部课程</view>
+      <view  class="title">课程列表</view>
   </view>
       <!-- Tab 容器1  start-->
       
-        <view class='list'  current="{{currentTab}}" bindchange="swiperTab" >
-          <view class="card"  bindtap="showlesson">
-              <view class="l-tittle">【Python】我写的第一个程序</view>
-              <view class="d-title">阅读本文需要4分钟</view>
-              <view class="r-info">已有303人学过</view>
+        <view class='list'  current="{{currentTab}}">
+          <view class="card"  bindtap="showlesson" wx:for="{{list}}" wx:key="item"  data-aid="{{item.aid}}">
+              <view class="l-tittle">{{item.title}}</view>
+              <view class="d-title">阅读本文需要{{item.readtime}}分钟</view>
+              <view class="r-info">已有{{item.readnum}}人学过</view>
           </view>
-
-          <view class="card">
-              <view class="l-tittle">【Python】我写的第一个程序</view>
-              <view class="d-title">阅读本文需要4分钟</view>
-              <view class="r-info">已有303人学过</view>
-          </view>
-
-          <view class="card">
-              <view class="l-tittle">【Python】我写的第一个程序</view>
-              <view class="d-title">阅读本文需要4分钟</view>
-              <view class="r-info">已有303人学过</view>
-          </view>
-          
 
         </view>
       

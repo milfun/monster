@@ -1,4 +1,6 @@
 // pages/lesson/lessonlist.js
+//获取应用实例
+const app = getApp()
 Page({
 
   /**
@@ -7,32 +9,25 @@ Page({
   data: {
     currentTab: 0,
   },
-  swiperTab: function (e) {
-    var that = this;
-    that.setData({
-      currentTab: e.detail.current
-    });
-  },
-  clickTab: function (e) {
-    var that = this;
-    if (this.data.currentTab === e.target.dataset.current) {
-      return false;
-    } else {
-      that.setData({
-        currentTab: e.target.dataset.current
-      })
-    }
-  },
-  showlesson: function () {
+  showlesson: function (t) {
+    var a = t.currentTarget.dataset.aid;
     wx.navigateTo({
-      url: 'lessonshow',
+      url: '../view/view?aid=' + a
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that=this;
+    //首页打卡文章1
+    app.func.req('c=index&a=articlelist', {}, function (res) {
+      if (res.status) {
+        that.setData({
+          list: res.list
+        })
+      }
+    })
   },
 
   /**

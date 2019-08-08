@@ -1,0 +1,9 @@
+<!--pages/loading/loading.wxml-->
+<view class='loading-container'>
+  <image class="loading-image" style="" mode="scaleToFill" src="../public/images/loading.png"></image>
+</view>
+
+<view class="enter-container">
+  <button class="enter-button" type='primary'  open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 开启打卡之旅 
+  </button>
+</view>

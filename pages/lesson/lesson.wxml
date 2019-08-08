@@ -4,7 +4,7 @@
       <view  class="title">全部课程</view>
   </view>
 
-  <view class="card c1" bindtap="showlesson">
+  <view class="card c1" bindtap="showlesson" data-lid="1">
       <view class="line-one" >
           <view class="l-title">Python编程基础入门</view>
           <view class="season">第1期</view>
@@ -14,25 +14,9 @@
           <view class="desc">专门给编程新手入门的课程</view>
       </view>
       <view class="line-three">
-          <view class="date">🔥 8月21日  18:00开课</view>
+          <view class="date">🔥 8月1日 开课</view>
       </view>
       
   </view>
-  <view class="card c2"  bindtap="showlesson" >
-      <view class="line-one">
-          <view class="l-title">其它热门文章</view>
-          <view class="season">第73期</view>
-      </view>
-      <view class="line-two">
-          <view class="total">60课时</view>
-          <view class="desc">专门给编程新手入门的课程</view>
-      </view>
-      <view class="line-three">
-          <view class="date">🔥 8月21日  18:00开课</view>
-      </view>
-      
-  </view>
-
-
-
+  
 </view>

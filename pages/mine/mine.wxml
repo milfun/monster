@@ -1,8 +1,11 @@
 <!--pages/mine/mine.wxml-->
 <view class="contain">
   <view class="head">
-      <image src="../public/images/logo.jpg"></image>
-      <view class="name">MilFun</view>
+    <block >
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+     <view class="name">{{userInfo.nickName}}</view>
+    </block>
+      
       <view class="iterm">
           <view class="grid-3">
               <view class="grid-iterm">
@@ -19,6 +22,7 @@
               </view>
           </view>
       </view>
+       <view class="clear"></view>
   </view>
   <view class="clear"></view>
 

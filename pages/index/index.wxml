@@ -1,11 +1,12 @@
 <!--index.wxml-->
 <view class="contain">
+
   <view class="banner">
       <image src="https://milfun.fun/mp/weixinapp/images/a1.jpg"></image>
   </view>
   <view class="iterm">
       <view class="l-tittle">{{list.title}}</view>
-      <view class="d-title">阅读本文需要{{list.readtime}}分钟</view>
+      <view class="d-title">{{userInfo.nickName}}阅读本文需要{{list.readtime}}分钟</view>
       <view class="btn" bindtap="goweb" data-aid="{{list.aid}}">参与打卡</view>
       <view class="line">
           <view class="l-img">

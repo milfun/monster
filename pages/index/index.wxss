@@ -7,6 +7,7 @@
   height: 10rpx;
 }
 .banner{
+ margin-top: 20rpx ;
   box-shadow:1px 0px 8px #ededed;
 }
 .banner image{

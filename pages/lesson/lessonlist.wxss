@@ -29,7 +29,7 @@
   height: 180rpx;
     padding: 20rpx;
     margin: 20rpx 0;
-    background-color: #ffe300;
+    background-color: #FFF;
     border-radius: 10rpx;
     box-shadow:1px 1px 8px #ededed;
 }
@@ -40,13 +40,13 @@
 .d-title{
   padding: 20rpx 0;
   font-size: 24rpx;
-  color: #282828;
+  color: #bbbbbb;
 
 }
 .r-info{
   font-size: 24rpx;
   padding: 10rpx 0;
-  color: #282828;
+  color: #bbbbbb;
 }
 
 

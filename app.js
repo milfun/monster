@@ -11,6 +11,7 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        
       }
     })
     // 获取用户信息
@@ -29,6 +30,11 @@ App({
                 this.userInfoReadyCallback(res)
               }
             }
+          })
+        } else {
+          // 没有授权，重定向到 loading 启动页
+          wx.navigateTo({
+            url: '/pages/loading/loading'
           })
         }
       }
