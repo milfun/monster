@@ -1,0 +1,29 @@
+<!--pages/gift/gift.wxml-->
+<view class="contain">
+  <view  class="nav">
+      <view  class="title">礼品列表</view>
+  </view>
+
+<view class="giftlist">
+        <view class="line-one">
+          <view class="l-img">
+              <image src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
+          </view>
+          <view class="name">
+          MilFun
+          </view>
+          <view class="signday">07:36:24</view>
+        </view>
+        <view class="line-one">
+          <view class="l-img">
+              <image src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
+          </view>
+          <view class="name">
+          MilFun
+          </view>
+          <view class="signday">07:36:24</view>
+        </view>
+    </view>
+</view>
+
+

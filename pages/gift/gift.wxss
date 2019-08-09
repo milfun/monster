@@ -1,4 +1,4 @@
-/* pages/rank/rank.wxss */
+/* pages/gift/gift.wxss */
 .contain{
   padding: 0 30rpx;
 }
@@ -11,7 +11,7 @@
     text-align: left;
     justify-content: space-between;
 }
-.ranklist{
+.giftlist{
   padding: 10rpx 0;
   box-shadow:1px 0px 8px #ededed;
 }
@@ -51,51 +51,3 @@
    padding: 20rpx;
    font-size: 30rpx;
 }
-.iterm{
-  margin: 30rpx 0;
-  padding: 20rpx 0;
-}
-.grid-3{
-  display: block;
-  width: 100%;
-  height: 180rpx;
-  margin: 15rpx 0;
-  text-align: center;
-}
-.grid-iterm{
-  display: inline-block;
-  width: 30%;
-  height: 150rpx;
-  background-color: #FFF;
-  background-image: url('https://milfun.fun/mp/weixinapp/images/it1.jpg');
-  background-size:100%;
-  border-radius: 10rpx;
-  box-shadow:1px 0px 8px #ededed;
-}
-.grid-iterm:nth-child(1){
-  float: left;
-}
-.grid-iterm:nth-child(3){
-   float: right;
-}
-.num{
-  position: relative;
-  top: -50rpx;
-  font-size: 30rpx;
-  color: #bbbbbb;
-}
-.desc{
-  position: relative;
-  top: -36rpx;
-  font-size:24rpx;
-  color: #282828;
-  width: 200rpx;
-}
-
-
-
-
-
-
-
-

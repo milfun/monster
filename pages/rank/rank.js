@@ -12,7 +12,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    //获取排行榜
+    var app = getApp()
+    app.func.req('c=index&a=getRank', {}, function (res) {
+      console.log(res)
+      return typeof cb == "function" && cb(res.data)
+    })
   },
 
   /**

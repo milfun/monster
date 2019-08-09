@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
     "pages/lesson/lesson",
     "pages/mine/mine",
     "pages/view/view",
@@ -9,7 +8,8 @@
     "pages/lesson/lessonlist",
     "pages/lesson/lessonshow",
     "pages/canvas/canvas",
-    "pages/loading/loading"
+    "pages/loading/loading",
+    "pages/gift/gift"
   ],
   "window": {
     "backgroundTextStyle": "light",

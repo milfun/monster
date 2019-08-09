@@ -15,17 +15,24 @@ Page({
   onLoad: function (options) {
     var that = this
     var aid = options.aid
-    //根据aid获取跳转链接
-    app.func.req('c=index&a=getarticle&aid='+aid, {}, function (res) {
-      if (res.status) {
-       /* wx.showToast({
-          title: res.list.link,
-        })*/
-        that.setData({
-          web_src: res.list.link
-        })
-      }
-    })
+    if(options.link){
+      that.setData({
+        web_src: options.link
+      })
+    }else{
+      //根据aid获取跳转链接
+      app.func.req('c=index&a=getarticle&aid=' + aid, {}, function (res) {
+        if (res.status) {
+          /* wx.showToast({
+             title: res.list.link,
+           })*/
+          that.setData({
+            web_src: res.list.link
+          })
+        }
+      })
+    }
+    
   },
 
   /**

@@ -1,7 +1,11 @@
 <!--pages/mine/mine.wxml-->
 <view class="contain">
   <view class="head">
-    <block >
+    <block wx:if="{{membersInfo}}">
+      <image class="userinfo-avatar" src="{{membersInfo.headimg}}" mode="cover"></image>
+     <view class="name">{{membersInfo.nickname}}</view>
+    </block>
+    <block wx:else>
       <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
      <view class="name">{{userInfo.nickName}}</view>
     </block>
@@ -9,15 +13,15 @@
       <view class="iterm">
           <view class="grid-3">
               <view class="grid-iterm">
-                  <view class="num">15天</view>
+                  <view class="num">{{membersInfo.signday}}天</view>
                   <view class="desc">累计学习</view>
               </view>
               <view class="grid-iterm">
-                  <view class="num">3天</view>
-                  <view class="desc">连续打卡</view>
+                  <view class="num">{{membersInfo.signday}}篇</view>
+                  <view class="desc">喜欢文章</view>
               </view>
               <view class="grid-iterm">
-                  <view class="num">10</view>
+                  <view class="num">{{membersInfo.point}}</view>
                     <view class="desc">积分数量</view>
               </view>
           </view>
@@ -28,17 +32,17 @@
 
   <view class="btn-list">
       <view class="grid-2">
-          <view class="grid-iterm2 g1 left">
+          <view class="grid-iterm2 g1 left" bindtap="gift">
               <view class="g-title right">兑换列表</view>
               <view class="g-desc right">你都收到了哪些礼物</view>
           </view>
-          <view class="grid-iterm2 g2 right">
+          <view class="grid-iterm2 g2 right" bindtap="contact">
               <view class="g-title">联系作者</view>
               <view class="g-desc">快来撩一撩吧</view>
           </view>
       </view>
       <view class="grid">
-          <view class="grid-iterm1 g3 right">
+          <view class="grid-iterm1 g3 right" bindtap="canvas">
               <view class="g-title">生成专属海报</view>
               <view class="g-desc">你的实力已经不允许你低调了</view>
           </view>

@@ -4,8 +4,9 @@ var secretKey = 'MilFuns'
 /****************使用请打开详情里面：https检测*************** */
 
 /************本地调试***********
-var rootDocment = 'http://localhost/74cms/index.php?m=Weixinapp&'
-var secretKey = 'MilFun'*/
+var rootDocment = 'http://localhost/api/index.php?m=Home&'
+var secretKey = 'MilFun'
+/**********************/
 function req(url, data, cb) {
   var app = getApp()
   //url: rootDocment + url + "&secretKey=" + secretKey,
@@ -45,7 +46,7 @@ function getWxUerinfo(cb) {
   wx.login({
     success: function (loginCode) {
       var app = getApp()
-      app.func.req('c=WxPublic&a=getWxUerinfo', { 'code': loginCode.code }, function (res) {
+      app.func.req('c=index&a=getWxUerinfo', { 'code': loginCode.code }, function (res){
 		    app.globalData.openid = res.data.openid
         app.globalData.WxUerinfo = res.data
         return typeof cb == "function" && cb(res.data)
@@ -66,10 +67,53 @@ function getLocation() {
     }
   })
 }
+//获取用户信息
+function getMembersInfos(cb) {
+  var app = getApp()
+  var membersInfo = app.globalData.membersInfo
+  app.func.o_req('c=index&a=getMembersInfos', {}, function (res) {
+    if (res.status == 1) {
+      app.globalData.membersInfo = res.data
+      return typeof cb == "function" && cb(res.data)
+    } else {
+      return typeof cb == "function" && cb(false)
+    }
+  });
+}
+//参与打卡
+function sign(data, cb) {
+  var app = getApp()
+  app.func.req('c=index&a=sign', {openid:data.openid,aid:data.aid}, function (res) {
+    console.log(res)
+    return typeof cb == "function" && cb(res.data)
+  })
+}
 
+//获取课程
+function getLesson(cb) {
+  var app = getApp()
+  app.func.req('c=index&a=getLesson', { }, function (res) {
+    console.log(res)
+    return typeof cb == "function" && cb(res.data)
+  })
+}
+
+//获取按钮
+function showBtn(cb) {
+  var app = getApp()
+  app.func.req('c=index&a=showBtn', {}, function (res) {
+    console.log(res)
+    return typeof cb == "function" && cb(res.data)
+  })
+}
 
 module.exports = {
   req: req,
   o_req: o_req,
-
+  getWxUerinfo: getWxUerinfo,
+  getLocation: getLocation,
+  getMembersInfos: getMembersInfos,
+  sign:sign,
+  getLesson: getLesson,
+  showBtn: showBtn,
 }  

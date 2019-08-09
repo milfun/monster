@@ -1,2 +1,49 @@
 <!--pages/rank/rank.wxml-->
-<text>pages/rank/rank.wxml</text>
+<view class="contain">
+  <view  class="nav">
+      <view  class="title">今日排行</view>
+  </view>
+  <view class="iterm">
+          <view class="grid-3">
+              <view class="grid-iterm">
+                  <image class="hd" src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
+                  <view class="num">06:50:60</view>
+                  <view class="desc">卖女孩的小火柴</view>
+              </view>
+              <view class="grid-iterm">
+                  <image class="hd" src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
+                  <view class="num">05:20:30</view>
+                  <view class="desc">MilFun</view>
+              </view>
+              <view class="grid-iterm">
+                   <image class="hd" src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
+                  <view class="num">07:10:52</view>
+                    <view class="desc">猴子派来的逗比</view>
+              </view>
+          </view>
+      </view>
+
+    <view class="ranklist">
+        <view class="line-one">
+          <view class="l-img">
+              <image src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
+          </view>
+          <view class="name">
+          MilFun
+          </view>
+          <view class="signday">07:36:24</view>
+        </view>
+        <view class="line-one">
+          <view class="l-img">
+              <image src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
+          </view>
+          <view class="name">
+          MilFun
+          </view>
+          <view class="signday">07:36:24</view>
+        </view>
+    </view>
+
+
+</view>
+

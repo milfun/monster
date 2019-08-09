@@ -7,7 +7,7 @@
   <view class="iterm">
       <view class="l-tittle">{{list.title}}</view>
       <view class="d-title">{{userInfo.nickName}}阅读本文需要{{list.readtime}}分钟</view>
-      <view class="btn" bindtap="goweb" data-aid="{{list.aid}}">参与打卡</view>
+      <view class="btn" bindtap="loginreg" data-aid="{{list.aid}}">参与打卡</view>
       <view class="line">
           <view class="l-img">
               <image src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
@@ -16,18 +16,18 @@
               <image src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
               <image src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
           </view>
-          <view class="r-info">有303人和你一起学习</view>
+          <view class="r-info">有{{list.readnum}}人和你一起学习</view>
       </view>
      
   </view>
   <view class="grid-2">
-      <view class="grid-iterm1 left" style=" ">
-          <view class="g-title right">专属社群</view>
-          <view class="g-desc right">让我与你一起成长</view>
+      <view class="grid-iterm1 left" style=" " bindtap="btn" data-link="{{btn1.link}}">
+          <view class="g-title right">{{btn1.name}}</view>
+          <view class="g-desc right">{{btn1.desc}}</view>
       </view>
-      <view class="grid-iterm2 right">
-          <view class="g-title">排行榜</view>
-          <view class="g-desc">看看谁是最厉害的</view>
+      <view class="grid-iterm2 right" bindtap="rank" data-link="{{btn2.link}}">
+          <view class="g-title">{{btn2.name}}</view>
+          <view class="g-desc">{{btn2.desc}}</view>
       </view>
   </view>
 </view>

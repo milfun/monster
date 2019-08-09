@@ -9,13 +9,41 @@ Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    membersInfo:{},
   },
-
+  //礼品列表
+  gift:function(){
+    wx.navigateTo({
+      url: '../gift/gift'
+    })
+  },
+  //联系作者
+  contact:function(){
+    wx,wx.setClipboardData({
+      data: 'MillFun',
+      success: function(res) {
+        wx.showToast({
+          title: '复制微信成功',
+        })
+      },
+      fail: function (res) {
+        wx.showToast({
+          title: '复制失败，请稍后再试！',
+        })},
+      complete: function(res) {},
+    })
+  },
+  canvas:function(){
+    wx.navigateTo({
+      url: '../canvas/canvas?openid='+ app.globalData.openid
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that =this
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -42,6 +70,13 @@ Page({
         }
       })
     }
+    //获取用户个人信息
+    app.func.getMembersInfos(function (res) {
+      console.log(res)
+      that.setData({
+        membersInfo: res
+      })
+    })
   },
 
   /**

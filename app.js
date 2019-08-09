@@ -42,8 +42,18 @@ App({
   },
   func:{
     req: commonFun.req,//http 请求
+    o_req: commonFun.o_req,//http 请求
+    getWxUerinfo: commonFun.getWxUerinfo,//获取openid
+    getMembersInfos: commonFun.getMembersInfos,//获取会员信息
+    getLocation: commonFun.getLocation,//获取经纬度
+    sign: commonFun.sign,//参与打卡
+    getLesson: commonFun.getLesson,//获取课程
+    showBtn: commonFun.showBtn,
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    openid: '',
+    membersInfo: null,
+    uid:'',
   }
 })
