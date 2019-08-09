@@ -49,6 +49,7 @@ App({
     sign: commonFun.sign,//参与打卡
     getLesson: commonFun.getLesson,//获取课程
     showBtn: commonFun.showBtn,
+    showMo: commonFun.showMo,
   },
   globalData: {
     userInfo: null,

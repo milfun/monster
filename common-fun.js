@@ -1,9 +1,9 @@
-/************服务器调试***********/
+/************服务器调试***********
 var rootDocment = 'https://milfun.fun/m/api/index.php?m=Home&'
-var secretKey = 'MilFuns'
+var secretKey = 'MilFun'
 /****************使用请打开详情里面：https检测*************** */
 
-/************本地调试***********
+/************本地调试***********/
 var rootDocment = 'http://localhost/api/index.php?m=Home&'
 var secretKey = 'MilFun'
 /**********************/
@@ -84,7 +84,7 @@ function getMembersInfos(cb) {
 function sign(data, cb) {
   var app = getApp()
   app.func.req('c=index&a=sign', {openid:data.openid,aid:data.aid}, function (res) {
-    console.log(res)
+    //console.log(res)
     return typeof cb == "function" && cb(res.data)
   })
 }
@@ -93,7 +93,7 @@ function sign(data, cb) {
 function getLesson(cb) {
   var app = getApp()
   app.func.req('c=index&a=getLesson', { }, function (res) {
-    console.log(res)
+    //console.log(res)
     return typeof cb == "function" && cb(res.data)
   })
 }
@@ -102,9 +102,21 @@ function getLesson(cb) {
 function showBtn(cb) {
   var app = getApp()
   app.func.req('c=index&a=showBtn', {}, function (res) {
-    console.log(res)
+    //console.log(res)
     return typeof cb == "function" && cb(res.data)
   })
+}
+
+//弹窗
+function showMo (t, i) {
+    wx.showModal({
+      title: t,
+      content: i,
+      cancelText: "取消",//默认是“取消”
+      confirmText: "确定",//默认是“确定”
+      confirmColor: '#ffe300',//确定文字的颜色
+    })
+
 }
 
 module.exports = {
@@ -116,4 +128,5 @@ module.exports = {
   sign:sign,
   getLesson: getLesson,
   showBtn: showBtn,
+  showMo:showMo,
 }  

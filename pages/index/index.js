@@ -24,10 +24,8 @@ Page({
   //web-view打开
   goweb:function(t){
     //跳转
-    var e = this,
-    a = t.currentTarget.dataset.aid;
     wx.navigateTo({
-      url: '../view/view?aid='+encodeURI(a)
+      url: '../view/view?aid='+encodeURI(t)
     })
   },
   btn:function(t){
@@ -43,7 +41,6 @@ Page({
       url: '../rank/rank'
     })
   },
-
   //注册用户
   loginreg: function (t) {
     var that = this
@@ -53,31 +50,32 @@ Page({
       openid: app.globalData.openid,
       headimg: app.globalData.userInfo.avatarUrl
     }, function (res) {
-      //用户没注册过，直接打卡
-      if (res.status){
-        that.setData({
-          uid: res.list.uid
-        })
-        app.func.sign({ openid: app.globalData.openid, aid: aid }, function (res) {
-
-        })
-      }else{
-        //打卡
-        wx.showModal({
-          title: '小提示',
-          content: '打卡失败，使用前请授权登陆，或者请联系开发者MilFun',
-        })
-      }
-      
+      //console.log(res)
+      //用户没注册过，
+      if (res.list.uid){
+          that.setData({
+            uid: res.list.uid
+          })
+          //打卡
+          app.func.sign({ openid: app.globalData.openid, aid: aid }, function (res) {
+            console.log(res.info)
+            /*app.func.showMo('提示消息', res.info)
+            that.goweb()*/
+          })
+        }else{
+          app.func.showMo('提示消息', '请授权后再使用本功能')
+        }
+        
     })
-    //console.log(res.data)
-    
-  },
+      
+      
+},//注册完直接打卡
+
   onLoad: function () {
     var that = this
     //获取openid
     app.func.getWxUerinfo(function (res) {
-      console.log(res)
+      //console.log(res)
       
     })
 
