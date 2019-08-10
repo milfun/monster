@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="contain">
 
-  <view class="banner">
+  <view class="banner" bindtap="goLuck">
       <image src="https://milfun.fun/mp/weixinapp/images/a1.jpg"></image>
   </view>
   <view class="iterm">

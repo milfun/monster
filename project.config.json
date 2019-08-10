@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+			"current": 9,
 			"list": [
 				{
 					"id": -1,
@@ -104,6 +104,19 @@
 					"name": "pages/gift/gift",
 					"pathName": "pages/gift/gift",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/canvas/canvas",
+					"pathName": "pages/canvas/canvas",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/luck/luck",
+					"pathName": "pages/luck/luck",
 					"scene": null
 				}
 			]

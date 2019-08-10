@@ -16,9 +16,9 @@ Page({
     btn2: {},
   },
   //事件处理函数
-  bindViewTap: function() {
+  goLuck: function() {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '../luck/luck'
     })
   },
   //web-view打开

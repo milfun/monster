@@ -40,9 +40,9 @@ Page({
       total = 45829,
       descs = "世界这么大，我们一起学习吧",
       logo = "../public/images/logo.jpg",
-      bg = "../public/images/bg.jpg",
+      bg = "../public/images/bb.jpg",
       c = wx.createCanvasContext("cc")
-    c.drawImage(logo, 0, 0, w, h)
+    c.drawImage(bg, 0, 0, w, h)
     /*************画圆************** *
     //开始路径画圆,剪切处理
     c.save();
@@ -64,7 +64,7 @@ Page({
     c.fillText(total, (w - c.measureText(total).width) * 0.5, 0.479 * h)
     c.setFontSize(24)
     c.fillText(descs, (w - c.measureText(descs).width) * 0.5, 0.54 * h),
-      c.drawImage(bg, w / 2 - 70, 0.712 * h, 120, 120),
+      c.drawImage(logo, w / 2 - 70, 0.712 * h, 120, 120),
       c.draw();
   },
   /**

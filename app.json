@@ -9,7 +9,8 @@
     "pages/lesson/lessonshow",
     "pages/canvas/canvas",
     "pages/loading/loading",
-    "pages/gift/gift"
+    "pages/gift/gift",
+    "pages/luck/luck"
   ],
   "window": {
     "backgroundTextStyle": "light",

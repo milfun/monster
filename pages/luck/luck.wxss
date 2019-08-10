@@ -1,0 +1,8 @@
+/* pages/luck/luck.wxss */
+.frame_view{
+  padding: 30rpx;
+}
+.frame_item{
+  width: 33.33%;
+  height: 160rpx;
+}
