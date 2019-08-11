@@ -9,6 +9,7 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     list:{},
+    list2: {},
     openid: app.globalData.openid,
     membersInfo: null,
     uid: app.globalData.uid,
@@ -84,7 +85,8 @@ Page({
     app.func.req('c=index&a=getarticle', {}, function (res) {
       if (res.status) {
         that.setData({
-          list: res.list
+          list: res.list,
+          list2:res.list2
         })
       }
     })

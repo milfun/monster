@@ -4,7 +4,7 @@ var secretKey = 'MilFun'
 /****************使用请打开详情里面：https检测*************** */
 
 /************本地调试***********
-var rootDocment = 'http://localhost/api/index.php?m=Home&'
+var rootDocment = 'http://localhost/3.2/api/api/index.php?m=Home&'
 var secretKey = 'MilFun'
 /**********************/
 function req(url, data, cb) {

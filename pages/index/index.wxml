@@ -10,11 +10,8 @@
       <view class="btn" bindtap="loginreg" data-aid="{{list.aid}}">参与打卡</view>
       <view class="line">
           <view class="l-img">
-              <image src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
-              <image src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
-              <image src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
-              <image src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
-              <image src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
+              <image wx:for="{{list2}}"  wx:key="item" src="{{list2.headimg}}"></image>
+              
           </view>
           <view class="r-info">有{{list.readnum}}人和你一起学习</view>
       </view>
