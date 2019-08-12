@@ -53,15 +53,30 @@ Page({
     }, function (res) {
       //console.log(res)
       //用户没注册过，
-      if (res.list.uid){
-          that.setData({
-            uid: res.list.uid
-          })
+        if (res.status){
+          if (res.status==1){
+            that.setData({
+              uid: res.list.uid
+            })
+          }
+          
           //打卡
-          app.func.sign({ openid: app.globalData.openid, aid: aid }, function (res) {
-            console.log(res.info)
-            /*app.func.showMo('提示消息', res.info)
-            that.goweb()*/
+          app.func.sign({ openid: app.globalData.openid, aid: aid }, function (aa) {
+            console.log(aa.msg)
+            if(aa.status==1){
+              wx.showToast({
+                title: '打卡成功',
+                icon: 'success',
+                duration: 2000
+              })
+              that.goweb(aa.aid)
+            }
+            else{
+              app.func.showMo('提示消息', aa.msg)
+            }
+            //
+            
+            
           })
         }else{
           app.func.showMo('提示消息', '请授权后再使用本功能')

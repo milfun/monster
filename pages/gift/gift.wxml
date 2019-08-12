@@ -5,23 +5,19 @@
   </view>
 
 <view class="giftlist">
-        <view class="line-one">
+        <view class="line-one" wx:for="{{list}}" wx:key="item" >
           <view class="l-img">
-              <image src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
+              <image src="{{item.imgurl}}"></image>
+              <view class="i-day">{{item.needpoint}}积分</view>
           </view>
-          <view class="name">
-          MilFun
+           
+          <view class="line-two">
+              <view class="i-name">{{item.name}}</view>
+              <view class="i-desc">{{item.desc}}</view>
+              <view class="i-num">已有{{item.getnum}}人选它</view>
           </view>
-          <view class="signday">07:36:24</view>
-        </view>
-        <view class="line-one">
-          <view class="l-img">
-              <image src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
-          </view>
-          <view class="name">
-          MilFun
-          </view>
-          <view class="signday">07:36:24</view>
+          
+         
         </view>
     </view>
 </view>

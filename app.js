@@ -50,6 +50,7 @@ App({
     getLesson: commonFun.getLesson,//获取课程
     showBtn: commonFun.showBtn,
     showMo: commonFun.showMo,
+    getGift: commonFun.getGift,
   },
   globalData: {
     userInfo: null,

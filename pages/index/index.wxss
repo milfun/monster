@@ -6,6 +6,14 @@
 .clear{
   height: 10rpx;
 }
+.bb{
+  background:linear-gradient(#ffe300,#FFF) 
+}
+.mm{
+  text-align: center;
+  width: 240rpx;
+  height: 60rpx;
+}
 .banner{
  margin-top: 20rpx ;
   box-shadow:1px 0px 8px #ededed;

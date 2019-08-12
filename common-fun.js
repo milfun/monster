@@ -4,7 +4,7 @@ var secretKey = 'MilFun'
 /****************使用请打开详情里面：https检测*************** */
 
 /************本地调试***********
-var rootDocment = 'http://localhost/3.2/api/api/index.php?m=Home&'
+var rootDocment = 'http://localhost/api/index.php?m=Home&'
 var secretKey = 'MilFun'
 /**********************/
 function req(url, data, cb) {
@@ -118,6 +118,14 @@ function showMo (t, i) {
     })
 
 }
+//获取礼品列表
+function getGift(cb) {
+  var app = getApp()
+  app.func.req('c=index&a=getGiftList', {}, function (res) {
+    //console.log(res)
+    return typeof cb == "function" && cb(res.data)
+  })
+}
 
 module.exports = {
   req: req,
@@ -129,4 +137,5 @@ module.exports = {
   getLesson: getLesson,
   showBtn: showBtn,
   showMo:showMo,
+  getGift: getGift,
 }  
