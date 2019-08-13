@@ -1,23 +1,38 @@
 <!--pages/luck/luck.wxml-->
-<view class="container">
-  停止位置:<input value='{{luckPosition}}' style="width:100%;text-align:center" bindinput='input' type='number'></input>
-  <view class='frame_view'>
-<view class='frame_row'>
-<image class='frame_item' style='opacity:{{color[0]}}' src='{{images[0]}}'></image>
-<image class='frame_item' style='opacity:{{color[1]}}' src='{{images[1]}}'></image>
-<image class='frame_item' style='opacity:{{color[2]}}' src='{{images[2]}}'></image>
-</view>
+<view class="contain">
+  <view  class="nav">
+      <view  class="title">抽奖活动</view>
+  </view>
+    <view class='frame_view'>
+        <view class='frame_row'>
+            <image class='frame_item' style='opacity:{{color[0]}}' src='{{images[0]}}'></image>
+            <image class='frame_item' style='opacity:{{color[1]}}' src='{{images[1]}}'></image>
+            <image class='frame_item' style='opacity:{{color[2]}}' src='{{images[2]}}'></image>
+        </view>
  
-<view class='frame_row'>
-<image class='frame_item' style='opacity:{{color[7]}}' src='{{images[7]}}'></image>
-<image class='frame_item' src='{{btnconfirm}}' bindtap='{{clickLuck}}'></image>
-<image class='frame_item' style='opacity:{{color[3]}}' src='{{images[3]}}'></image>
-</view>
+        <view class='frame_row'>
+            <image class='frame_item' style='opacity:{{color[7]}}' src='{{images[7]}}'></image>
+            <image class='frame_item' src='{{btnconfirm}}' bindtap='{{clickLuck}}'></image>
+            <image class='frame_item' style='opacity:{{color[3]}}' src='{{images[3]}}'></image>
+        </view>
  
-<view class='frame_row'>
-<image class='frame_item' style='opacity:{{color[6]}}' src='{{images[6]}}'></image>
-<image class='frame_item' style='opacity:{{color[5]}}' src='{{images[5]}}'></image>
-<image class='frame_item' style='opacity:{{color[4]}}' src='{{images[4]}}'></image>
-</view>
-</view>
+        <view class='frame_row'>
+              <image class='frame_item' style='opacity:{{color[6]}}' src='{{images[6]}}'></image>
+              <image class='frame_item' style='opacity:{{color[5]}}' src='{{images[5]}}'></image>
+              <image class='frame_item' style='opacity:{{color[4]}}' src='{{images[4]}}'></image>
+        </view>
+    </view>
+    
+    <view class="desc">
+        <view class="det">查看视频广告，获取抽奖机会</view>
+        <view class="det">每天三次机会，剩余<span>3</span>次机会</view>
+    </view>
+
+    <view class="desc">
+        <view class="det">累计抽奖<span>14135</span>人次</view>
+    </view>
+
+    <view class="desc">
+        <text class="det">补卡券可直接使用，其他请添加微信兑换</text>
+    </view>
 </view>

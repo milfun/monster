@@ -1,5 +1,5 @@
 /**index.wxss**/
-@import '../../app.wxss'
+@import '../../app.wxss';
 .contain{
   padding: 0 30rpx;
 }

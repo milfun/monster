@@ -10,7 +10,15 @@ Page({
     currentTab: 0,
   },
   showlesson: function (t) {
+    //人气加一
+    var aa=2;
+    var that=this
     var a = t.currentTarget.dataset.aid;
+    app.func.req('c=index&a=addHot', {aa:aa,aid:a}, function (res) {
+
+    })
+  //跳转
+   
     wx.navigateTo({
       url: '../view/view?aid=' + a
     })

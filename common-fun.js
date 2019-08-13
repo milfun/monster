@@ -1,9 +1,9 @@
-/************服务器调试***********/
+/************服务器调试***********
 var rootDocment = 'https://milfun.fun/m/api/index.php?m=Home&'
 var secretKey = 'MilFun'
 /****************使用请打开详情里面：https检测*************** */
 
-/************本地调试***********
+/************本地调试***********/
 var rootDocment = 'http://localhost/api/index.php?m=Home&'
 var secretKey = 'MilFun'
 /**********************/
