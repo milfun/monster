@@ -1,7 +1,7 @@
 <!--pages/luck/luck.wxml-->
 <view class="contain">
   <view  class="nav">
-      <view  class="title">抽奖活动</view>
+      <view  class="title">抽奖活动(正在开发中...)</view>
   </view>
     <view class='frame_view'>
         <view class='frame_row'>
@@ -12,7 +12,7 @@
  
         <view class='frame_row'>
             <image class='frame_item' style='opacity:{{color[7]}}' src='{{images[7]}}'></image>
-            <image class='frame_item' src='{{btnconfirm}}' bindtap='{{clickLuck}}'></image>
+            <image class='frame_item' src='{{btnconfirm}}' bindtap='test' data-uid="{{membersInfo.uid}}"></image>
             <image class='frame_item' style='opacity:{{color[3]}}' src='{{images[3]}}'></image>
         </view>
  
@@ -25,11 +25,11 @@
     
     <view class="desc">
         <view class="det">查看视频广告，获取抽奖机会</view>
-        <view class="det">每天三次机会，剩余<span>3</span>次机会</view>
+        <view class="det">每天三次机会，剩余<span>{{number}}</span>次机会</view>
     </view>
 
     <view class="desc">
-        <view class="det">累计抽奖<span>14135</span>人次</view>
+        <view class="det">累计抽奖<span>{{totalnum}}</span>人次</view>
     </view>
 
     <view class="desc">

@@ -21,7 +21,7 @@ Page({
       })
     }else{
       //根据aid获取跳转链接
-      app.func.req('c=index&a=getarticle&aid=' + aid, {}, function (res) {
+      app.func.req('c=index&a=viewArticle&aid=' + aid, {}, function (res) {
         if (res.status) {
           /* wx.showToast({
              title: res.list.link,

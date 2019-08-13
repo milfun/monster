@@ -14,7 +14,7 @@
 }
 .title{
   display: inline-block;
-    width: 30%;
+    width: 80%;
     float: left; 
     color:#282828;
     font-weight: 200;

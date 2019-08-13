@@ -1,5 +1,8 @@
 // pages/luck/luck.js
 //计数器
+//获取应用实例
+const app = getApp()
+
 var interval = null;
 
 //值越大旋转时间越长  即旋转速度
@@ -20,6 +23,7 @@ Page({
     clickLuck: 'clickLuck',
     //中奖位置
     luckPosition: 7,
+    membersInfo:{},
   },
   //进入页面时缓慢切换
   loadAnimation: function () {
@@ -58,6 +62,7 @@ Page({
     var index = current + 1;
 
     e.stopLuck(which, index, intime, 10);
+    return 1;
   },
   /**
    * which:中奖位置
@@ -91,68 +96,57 @@ Page({
         //当前位置+1
         index++;
         e.stopLuck(which, index, time, splittime);
-      } else {
-        //1秒后显示弹窗
-        setTimeout(function () {
-          if (which == 1 || which == 3 || which == 5 || which == 7) {
-            //中奖
-            wx.showModal({
-              title: '提示',
-              content: '恭喜中奖',
-              showCancel: false,
-              success: function (res) {
-                if (res.confirm) {
-                  //设置按钮可以点击
-                  e.setData({
-                    btnconfirm: '../public/images/dianjichoujiang.png',
-                    clickLuck: 'clickLuck',
-                  })
-                  e.loadAnimation();
-                }
-              }
-            })
-          } else {
-            //中奖
-            wx.showModal({
-              title: '提示',
-              content: '很遗憾未中奖',
-              showCancel: false,
-              success: function (res) {
-                if (res.confirm) {
-                  //设置按钮可以点击
-                  e.setData({
-                    btnconfirm: '../public/images/dianjichoujiang.png',
-                    clickLuck: 'clickLuck',
-                  })
-                  e.loadAnimation();
-                }
-              }
-            })
-          }
-        }, 1000);
-      }
+      } 
     }, time);
   },
   /**
    * 生命周期函数--监听页面加载
    */
-  getluck:function(){
+  getluck:function(t){
     var e = this
-    //模拟网络请求时间  设为两秒
-    var stoptime = 2000;
-    setTimeout(function () {
-      e.stop(e.data.luckPosition);
-    }, stoptime)
+    
+  },
+  test:function(t){
+    //获取用户信息
+    var e = this,
+    uid = t.currentTarget.dataset.uid;
+    app.func.req('c=index&a=getLuck', {uid:uid}, function (res) {
+      console.log(res)
+      if(res.status==1){
+        //模拟网络请求时间  设为两秒
+        var stoptime = 500;
+        setTimeout(function () {
+          if (e.stop(res.luckid)) 
+         {
+            setTimeout(function () { app.func.showMo('抽奖提示', '恭喜你获得' + res.yes)}, 6000);
+         }
+        }, stoptime)
+      }else{
+        app.func.showMo('抽奖提示', '您的抽奖次数已经用完，明天再来抽吧')
+      }
+    })
   },
   onLoad: function (options) {
+    var that= this
+    //获取用户个人信息
+    app.func.getMembersInfos(function (res) {
+      //console.log(res)
+      that.setData({
+        membersInfo: res
+      })
+      //获取用户初始数据
+      app.func.req('c=index&a=showLuck', { uid: that.data.membersInfo.uid }, function (res) {
+        console.log(res)
+        that.setData({
+          totalnum: res.totalnum,
+          number:res.number
+        })
+      })
+    })
     //缓慢变换
     this.loadAnimation()
-    //后台获取停止位置
-
-    //然后开始抽奖。
-    this.getluck()
-   
     
+
   },
 
   /**
