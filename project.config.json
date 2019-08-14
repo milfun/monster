@@ -21,7 +21,7 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
+	"libVersion": "2.7.7",
 	"appid": "wx34c3b96a26969a8c",
 	"projectname": "monster",
 	"debugOptions": {

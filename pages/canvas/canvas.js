@@ -10,6 +10,7 @@ Page({
   data: {
     list:{},
     logo:'',
+    bg:'',
   },
 
   /**
@@ -25,9 +26,12 @@ Page({
         });
       }
     }),
+      wx.showLoading({
+        title: '生成中',
+      })
     //获取用户数据
       app.func.req('c=index&a=canvas&openid=' + e.openid, {}, function (res) {
-        console.log(res)
+       // console.log(res)
           o.setData({
             list: res,
           });
@@ -38,12 +42,23 @@ Page({
               o.setData({
                 logo: t.tempFilePath
               });
-              o.cc();
+              
               wx.hideLoading()
             }
           });
+        wx.downloadFile({
+          //url: res.data.qrimg,
+          url: res.bg,
+          success: function (t) {
+            o.setData({
+              bg: t.tempFilePath
+            });
+            o.cc();
+            wx.hideLoading()
+          }
+        });
       })
-
+   
   },
   cc: function () {
 
@@ -60,7 +75,7 @@ Page({
       total = a.list.total,
       descs = a.list.descs,
       logo = a.logo,
-      bg = a.list.bg,
+      bg = a.bg,
       scan = a.list.scan,
       c = wx.createCanvasContext("cc")
     c.drawImage(bg, 0, 0, w, h)
