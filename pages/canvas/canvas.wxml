@@ -1,4 +1,6 @@
 <!--pages/canvas/canvas.wxml-->
 <view class="haha">
-<canvas canvasId="cc" style="width:100%;height:600px;"></canvas>
+<canvas canvasId="cc" style="width:100%;height:500px;"></canvas>
+
 </view>
+<view  class="qs-btn qs-btn-orange font18" bindtap="totemp">保存图片,并返回</view>

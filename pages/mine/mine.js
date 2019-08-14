@@ -124,7 +124,12 @@ Page({
   /**
    * 用户点击右上角分享
    */
+  //分享
   onShareAppMessage: function () {
-
+    return {
+      title: '怪兽研习社-每日打卡小程序',
+      desc: '专为怪兽研习社研发的打卡小程序哦~',
+      path: 'https://milfun.fun/mp/weixinapp/images/share.jpg'
+    }
   }
 })

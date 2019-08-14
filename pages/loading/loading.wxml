@@ -1,6 +1,6 @@
 <!--pages/loading/loading.wxml-->
 <view class='loading-container'>
-  <image class="loading-image" style="" mode="scaleToFill" src="../public/images/loading.png"></image>
+  <image class="loading-image" style="" mode="scaleToFill" src="https://milfun.fun/mp/weixinapp/images/loading.png"></image>
 </view>
 
 <view class="enter-container">

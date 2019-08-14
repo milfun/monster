@@ -1,2 +1,13 @@
 /* pages/canvas/canvas.wxss */
 .haha{width: 100%;height: 100%;}
+.qs-btn{
+  position:absolute;
+  left:0px;
+  bottom:0rpx;
+  padding: 30rpx;
+  color: #282828;
+  text-align: center;
+  margin: 20rpx;
+  border-radius: 10rpx;
+ }
+.qs-btn-orange{background-color:#ffeb30;position:relative;-webkit-transform:translateZ(0);transform:translateZ(0);}
