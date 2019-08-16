@@ -12,10 +12,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that =this
     //获取排行榜
     var app = getApp()
     app.func.req('c=index&a=getRank', {}, function (res) {
       console.log(res)
+      that.setData({
+        lista: res.list[0],
+        listb: res.list[1],
+        listc: res.list[2],
+        list2: res.list2
+      })
       return typeof cb == "function" && cb(res.data)
     })
   },
@@ -65,7 +72,13 @@ Page({
   /**
    * 用户点击右上角分享
    */
+  //分享
   onShareAppMessage: function () {
-
+    return {
+      title: '怪兽研习社-每日打卡小程序',
+      desc: '专为怪兽研习社研发的打卡小程序哦~',
+      path: '/pages/index/index',
+      imageUrl: 'https://milfun.fun/mp/weixinapp/images/share.jpg'
+    }
   }
 })

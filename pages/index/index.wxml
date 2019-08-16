@@ -1,7 +1,9 @@
 <!--index.wxml-->
-<!--
-<view class="bb"><image class="mm" src="https://milfun.fun/m/images/monster.png"></image></view>
--->
+<!---->
+
+<view style="width:100%;position:relative;">
+ <official-account style=""></official-account>
+</view>
 <view class="contain">
   <view class="banner" bindtap="goLuck">
       <image src="https://milfun.fun/mp/weixinapp/images/a1.jpg"></image>

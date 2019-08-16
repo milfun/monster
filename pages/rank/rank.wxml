@@ -1,47 +1,42 @@
 <!--pages/rank/rank.wxml-->
+<view style="width:100%;position:relative;">
+ <official-account style=""></official-account>
+</view>
 <view class="contain">
   <view  class="nav">
       <view  class="title">今日排行</view>
   </view>
   <view class="iterm">
           <view class="grid-3">
-              <view class="grid-iterm">
-                  <image class="hd" src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
-                  <view class="num">06:50:60</view>
-                  <view class="desc">卖女孩的小火柴</view>
+              <view class="grid-iterm" >
+                  <image class="hd" src="{{lista.headimg}}"></image>
+                  <view class="num">{{lista.signday}}</view>
+                  <view class="desc">{{lista.name}}</view>
               </view>
-              <view class="grid-iterm">
-                  <image class="hd" src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
-                  <view class="num">05:20:30</view>
-                  <view class="desc">MilFun</view>
+              <view class="grid-iterm" >
+                  <image class="hd" src="{{listb.headimg}}"></image>
+                  <view class="num">{{listb.signday}}</view>
+                  <view class="desc">{{listb.name}}</view>
               </view>
-              <view class="grid-iterm">
-                   <image class="hd" src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
-                  <view class="num">07:10:52</view>
-                    <view class="desc">猴子派来的逗比</view>
+              <view class="grid-iterm" >
+                  <image class="hd" src="{{listc.headimg}}"></image>
+                  <view class="num">{{listc.signday}}</view>
+                  <view class="desc">{{listc.name}}</view>
               </view>
           </view>
       </view>
 
     <view class="ranklist">
-        <view class="line-one">
+        <view class="line-one"  wx:for="{{list2}}" wx:key="item" >
           <view class="l-img">
-              <image src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
+              <image src="{{item.headimg}}"></image>
           </view>
           <view class="name">
-          MilFun
+         {{item.name}}
           </view>
-          <view class="signday">07:36:24</view>
+          <view class="signday">{{item.signday}}</view>
         </view>
-        <view class="line-one">
-          <view class="l-img">
-              <image src="https://milfun.fun/mp/weixinapp/images/logo.jpg"></image>
-          </view>
-          <view class="name">
-          MilFun
-          </view>
-          <view class="signday">07:36:24</view>
-        </view>
+        
     </view>
 
 

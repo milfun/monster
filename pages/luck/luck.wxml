@@ -1,4 +1,7 @@
 <!--pages/luck/luck.wxml-->
+<view style="width:100%;position:relative;">
+ <official-account style=""></official-account>
+</view>
 <view class="contain">
   <view  class="nav">
       <view  class="title">抽奖活动(正在开发中...)</view>

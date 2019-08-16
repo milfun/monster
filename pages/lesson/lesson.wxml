@@ -1,4 +1,7 @@
 <!--lesson.wxml-->
+<view style="width:100%;position:relative;">
+ <official-account style=""></official-account>
+</view>
 <view class="contain">
   <view  class="nav">
       <view  class="title">全部课程</view>

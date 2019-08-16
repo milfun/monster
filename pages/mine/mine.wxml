@@ -1,4 +1,7 @@
 <!--pages/mine/mine.wxml-->
+<view style="width:100%;position:relative;">
+ <official-account style=""></official-account>
+</view>
 <view class="contain">
   <view class="head">
     <block wx:if="{{membersInfo}}">

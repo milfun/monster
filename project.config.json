@@ -21,7 +21,7 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.7.7",
+	"libVersion": "2.3.0",
 	"appid": "wx34c3b96a26969a8c",
 	"projectname": "monster",
 	"debugOptions": {
@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 9,
+			"current": 13,
 			"list": [
 				{
 					"id": -1,
@@ -93,11 +93,11 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 6,
 					"name": "pages/rank/rank",
 					"pathName": "pages/rank/rank",
 					"query": "",
-					"scene": null
+					"scene": 1011
 				},
 				{
 					"id": -1,
@@ -117,7 +117,36 @@
 					"id": -1,
 					"name": "pages/luck/luck",
 					"pathName": "pages/luck/luck",
+					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": 1011
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": 1011
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": 1011
+				},
+				{
+					"id": -1,
+					"name": "pages/loading/loading",
+					"pathName": "pages/loading/loading",
+					"query": "",
+					"scene": 1011
 				}
 			]
 		}
